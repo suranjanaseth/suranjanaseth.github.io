@@ -42,13 +42,13 @@ function initParticles() {
     reset() {
       this.x = Math.random() * canvas.width;
       this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 1.8 + 0.5;
-      this.speedX = (Math.random() - 0.5) * 0.3;
-      this.speedY = (Math.random() - 0.5) * 0.3;
-      this.opacity = Math.random() * 0.4 + 0.1;
-      this.color = Math.random() > 0.7
-        ? `rgba(212, 175, 55, ${this.opacity})`
-        : `rgba(148, 163, 184, ${this.opacity * 0.5})`;
+      this.size = Math.random() * 1.5 + 0.4;
+      this.speedX = (Math.random() - 0.5) * 0.2;
+      this.speedY = (Math.random() - 0.5) * 0.2;
+      this.opacity = Math.random() * 0.3 + 0.1;
+      this.color = Math.random() > 0.85
+        ? `rgba(96, 165, 250, ${this.opacity * 0.5})`
+        : `rgba(148, 163, 184, ${this.opacity * 0.3})`;
     }
 
     update() {
@@ -59,10 +59,10 @@ function initParticles() {
       const dx = this.x - mouseX;
       const dy = this.y - mouseY;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 120) {
-        const force = (120 - dist) / 120;
-        this.x += dx * force * 0.02;
-        this.y += dy * force * 0.02;
+      if (dist < 100) {
+        const force = (100 - dist) / 100;
+        this.x += dx * force * 0.015;
+        this.y += dy * force * 0.015;
       }
 
       if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
@@ -77,7 +77,7 @@ function initParticles() {
     }
   }
 
-  const particleCount = Math.min(Math.floor((canvas.width * canvas.height) / 12000), 120);
+  const particleCount = Math.min(Math.floor((canvas.width * canvas.height) / 18000), 70);
   for (let i = 0; i < particleCount; i++) {
     particles.push(new Particle());
   }
@@ -89,12 +89,12 @@ function initParticles() {
         const dy = particles[i].y - particles[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 150) {
-          const opacity = (1 - dist / 150) * 0.08;
+        if (dist < 130) {
+          const opacity = (1 - dist / 130) * 0.04;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(212, 175, 55, ${opacity})`;
+          ctx.strokeStyle = `rgba(148, 163, 184, ${opacity})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
