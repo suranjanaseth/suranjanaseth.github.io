@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suranjana Seth — Workday Compensation & Total Rewards Specialist</title>
+    <title>Suranjana Seth — Workday Compensation & Total Rewards Operations</title>
     <meta name="description" content="Suranjana Seth — Workday Compensation Associate at PwC. Specializing in annual & mid-year compensation cycles, eligibility rules, CGP governance, and Alteryx automation for 300,000+ employees.">
-    <meta name="keywords" content="Workday, Advanced Compensation, HCM, EIB, Total Rewards, PwC, Alteryx, Payroll, Oracle Fusion">
     <meta name="author" content="Suranjana Seth">
-    <meta property="og:title" content="Suranjana Seth — Workday Compensation & Total Rewards Specialist">
-    <meta property="og:description" content="Workday Compensation Associate at PwC, executing full-lifecycle compensation events, EIB automation, and compliance auditing for 300,000+ employees.">
-    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="index.css?v=2.1">
+    <link rel="stylesheet" href="index.css?v=3.0">
 </head>
 <body>
 
-<!-- Ambient Background Canvas -->
-<canvas id="particle-canvas"></canvas>
-
-<!-- Navigation -->
+<!-- ── Navigation ── -->
 <nav class="navbar" id="navbar">
     <div class="nav-container">
-        <a href="#hero" class="nav-logo">Suranjana Seth</a>
+        <div class="nav-brand">
+            <a href="#hero" class="nav-logo">Suranjana Seth</a>
+            <span class="nav-tagline">Workday Compensation & Total Rewards</span>
+        </div>
         <div class="nav-links" id="navLinks">
             <a href="#about">About</a>
-            <a href="#competencies">Expertise</a>
+            <a href="#lifecycle">Comp Lifecycle</a>
             <a href="#experience">Experience</a>
-            <a href="#skills">Tech Stack</a>
+            <a href="#skills">Systems & Skills</a>
+            <a href="#education">Credentials</a>
             <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <a href="mailto:suranjanaseth@gmail.com" class="btn btn-outline btn-sm">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://linkedin.com/in/suranjana-seth-7a2a741" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" id="nav-linkedin-btn">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
         </div>
         <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
             <span></span>
@@ -40,188 +45,252 @@
     </div>
 </nav>
 
-<!-- ═══════════════ HERO ═══════════════ -->
-<section class="hero" id="hero">
-    <div class="hero-content">
-        <div class="hero-badge">
-            <span class="dot"></span>
-            Workday Compensation & Total Rewards
-        </div>
-        <h1>Suranjana <span class="text-accent">Seth</span></h1>
-        <p class="hero-subtitle">
-            Workday Compensation Associate at PwC — delivering full-lifecycle annual and mid-year compensation cycles, 
-            eligibility rule architecture, Compensation Grade Profiles, and Alteryx automation for a global enterprise of 300,000+ employees.
-        </p>
-        <div class="hero-cta">
-            <a href="#experience" class="btn btn-primary">
-                <i class="fas fa-briefcase"></i> View Experience
-            </a>
-            <a href="#contact" class="btn btn-outline">
-                <i class="fas fa-envelope"></i> Get in Touch
-            </a>
-        </div>
-        <div class="hero-stats">
-            <div class="stat">
-                <div class="stat-number" data-count="300">0</div>
-                <div class="stat-label">K+ Employees Supported</div>
+<!-- ── Hero Section ── -->
+<header class="hero" id="hero">
+    <div class="hero-container">
+        <div class="hero-intro">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                PwC · Global Total Rewards Operations
             </div>
-            <div class="stat">
-                <div class="stat-number" data-count="4">0</div>
-                <div class="stat-label">Years HRIS & Payroll</div>
+            <h1>Suranjana Seth</h1>
+            <div class="hero-subtitle">Workday Compensation Associate | HRIS & Total Rewards Specialist</div>
+            <p class="hero-bio">
+                4+ years of progressive HR operations experience spanning HRIS administration, Workday Compensation configuration, 
+                and downstream payroll processing. Specializing in executing end-to-end annual and mid-year compensation cycles at PwC 
+                for a global workforce of 300,000+ employees, designing eligibility rules and Compensation Grade Profiles, and building 
+                Alteryx automated reconciliation pipelines.
+            </p>
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i> Bangalore, India
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-envelope"></i> suranjanaseth@gmail.com
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-phone-alt"></i> +91-8917246233
+                </div>
             </div>
-            <div class="stat">
-                <div class="stat-number" data-count="60">0</div>
-                <div class="stat-label">% Manual Effort Saved</div>
+            <div class="hero-cta">
+                <a href="#experience" class="btn btn-primary">
+                    <i class="fas fa-briefcase"></i> View Career Experience
+                </a>
+                <a href="https://linkedin.com/in/suranjana-seth-7a2a741" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="hero-linkedin-btn">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn Profile
+                </a>
+                <a href="mailto:suranjanaseth@gmail.com" class="btn btn-outline">
+                    <i class="fas fa-paper-plane"></i> Get in Touch
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="card-header-label">
+                <i class="fas fa-chart-simple"></i> Key Impact & Scale
+            </div>
+            <div class="hero-stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">300K+</div>
+                    <div class="stat-label">Global Employees Supported at PwC</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">60%+</div>
+                    <div class="stat-label">Manual EIB & Audit Effort Saved</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">98%+</div>
+                    <div class="stat-label">ServiceNow SLA Resolution Rate</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Records Reconciled per Cycle</div>
+                </div>
+            </div>
+            <div class="card-profile-summary">
+                <div class="summary-row">
+                    <span class="label">Current Position:</span>
+                    <span class="val">Workday Compensation Associate</span>
+                </div>
+                <div class="summary-row">
+                    <span class="label">Enterprise:</span>
+                    <span class="val">PwC (PricewaterhouseCoopers)</span>
+                </div>
+                <div class="summary-row">
+                    <span class="label">Core Platforms:</span>
+                    <span class="val">Workday, Oracle Fusion, Datacom, Kronos</span>
+                </div>
+                <div class="summary-row">
+                    <span class="label">Specialization:</span>
+                    <span class="val">Advanced Comp, EIB, Alteryx, Audits</span>
+                </div>
             </div>
         </div>
     </div>
-</section>
+</header>
 
-<!-- ═══════════════ ABOUT ═══════════════ -->
+<!-- ── About Section ── -->
 <section class="section" id="about">
     <div class="section-container">
-        <div class="section-header reveal">
+        <div class="section-header">
             <div class="section-label">Professional Background</div>
-            <h2 class="section-title">Compensation & Systems Specialist</h2>
+            <h2 class="section-title">Bridging Compensation Policy with Systems & Automation</h2>
+            <p class="section-desc">
+                Operating at the critical intersection of Rewards Center of Excellence (COE) policy, technical HRIS configuration, 
+                and downstream gross-to-net payroll execution.
+            </p>
         </div>
-        <div class="about-grid">
-            <div class="about-text reveal">
-                <p>
-                    I specialize in <strong>Workday Advanced Compensation and Total Rewards Operations</strong> at PwC, 
-                    driving end-to-end event execution across complex multinational structures. My work covers the full lifecycle 
-                    of annual rewards cycles—from performance launch and evaluation task reassignments through compensation grid 
-                    configuration, live corrections, and Annual Performance Bonus (APB) processing.
+
+        <div class="credentials-grid">
+            <div class="credential-card">
+                <div class="credential-header">
+                    <i class="fas fa-award"></i> Core Compensation & Systems Focus
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
+                    My background encompasses hands-on configuration of Workday Advanced Compensation eligibility rules, 
+                    Compensation Grade Profiles (CGP), and bonus matrices across Sandbox and Production tenants. I coordinate 
+                    closely with global Rewards COE teams to ensure policy adherence while ensuring zero disruptions during peak cycle execution.
                 </p>
-                <p>
-                    Leveraging <strong>Alteryx ETL and automation workflows</strong>, I build automated pipelines that eliminate 
-                    manual file preparation, cross-validate post-load Workday reporting for 10,000+ records, and accelerate cycle 
-                    delivery while slashing data entry discrepancies.
-                </p>
-                <p>
-                    With multi-platform operational experience spanning <strong>Workday, Oracle Fusion, PeopleSoft, Kronos, and Datacom DataPay</strong>, 
-                    I bridge the gap between Rewards COE policy design, technical configuration, and downstream payroll execution.
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+                    With end-to-end multi-platform exposure across <strong>Workday, Oracle Fusion, PeopleSoft, Kronos, and Datacom DataPay</strong>, 
+                    I understand the operational dependencies that link performance ratings to compensation grids and downstream payroll runs.
                 </p>
             </div>
-            <div class="about-highlights reveal">
-                <div class="highlight-card">
-                    <i class="fa-solid fa-building-columns highlight-icon"></i>
-                    <div class="highlight-value">PwC</div>
-                    <div class="highlight-label">Global Professional Services</div>
+
+            <div class="credential-card">
+                <div class="credential-header">
+                    <i class="fas fa-bolt"></i> Process Optimization & Automation
                 </div>
-                <div class="highlight-card">
-                    <i class="fa-solid fa-bolt highlight-icon"></i>
-                    <div class="highlight-value">60%+</div>
-                    <div class="highlight-label">EIB Effort Reduced</div>
-                </div>
-                <div class="highlight-card">
-                    <i class="fa-solid fa-sliders highlight-icon"></i>
-                    <div class="highlight-value">3+</div>
-                    <div class="highlight-label">Alteryx Automation Pipelines</div>
-                </div>
-                <div class="highlight-card">
-                    <i class="fa-solid fa-circle-check highlight-icon"></i>
-                    <div class="highlight-value">98%+</div>
-                    <div class="highlight-label">ServiceNow On-Time SLA</div>
-                </div>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1rem;">
+                    Manual spreadsheet manipulation during enterprise compensation cycles introduces massive operational risk. 
+                    I design and implement dedicated <strong>Alteryx automation pipelines</strong> to validate EIBs, cross-reconcile post-load 
+                    Workday reporting against source records, and automate monthly audit exception reporting.
+                </p>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+                    Certified in <strong>Lean Six Sigma (Green Belt, KPMG)</strong>, I focus on eliminating non-value-added manual tasks, 
+                    conducting root-cause investigations, and establishing rigorous Corrective and Preventive Actions (CAPA).
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════ COMPETENCIES ═══════════════ -->
-<section class="section" id="competencies" style="background: var(--bg-secondary);">
+<!-- ── Compensation Lifecycle Pipeline ── -->
+<section class="section section-alt" id="lifecycle">
     <div class="section-container">
-        <div class="section-header reveal">
-            <div class="section-label">Core Capabilities</div>
-            <h2 class="section-title">Domain Competencies</h2>
-            <p class="section-desc">Technical configuration, governance, and operational execution across enterprise compensation ecosystems</p>
+        <div class="section-header">
+            <div class="section-label">Operational Framework</div>
+            <h2 class="section-title">The Year-End Compensation Lifecycle</h2>
+            <p class="section-desc">
+                The chronological execution sequence I drive from initial performance reviews through to final bonus allocations:
+            </p>
         </div>
-        <div class="competencies-grid reveal">
-            <div class="competency-chip">Workday Advanced Compensation</div>
-            <div class="competency-chip">Performance-to-Comp Event Lifecycle</div>
-            <div class="competency-chip">Compensation Eligibility Rules</div>
-            <div class="competency-chip">Compensation Grade Profiles (CGP)</div>
-            <div class="competency-chip">Annual Performance Bonus (APB)</div>
-            <div class="competency-chip">Merit & Bonus Planning</div>
-            <div class="competency-chip">EIB Design & Mass Data Loads</div>
-            <div class="competency-chip">Process Automation (Alteryx)</div>
-            <div class="competency-chip">Business Process Framework</div>
-            <div class="competency-chip">Calculated Fields & Custom Reporting</div>
-            <div class="competency-chip">Sandbox & Production Validation</div>
-            <div class="competency-chip">Downstream Payroll Integration</div>
-            <div class="competency-chip">UAT & End-to-End Test Execution</div>
-            <div class="competency-chip">Data Reconciliation & Governance</div>
-            <div class="competency-chip">Tier-3 Service Delivery (ServiceNow)</div>
-            <div class="competency-chip">Cross-Functional Stakeholder Alignment</div>
+
+        <div class="lifecycle-flow">
+            <div class="flow-step">
+                <span class="step-num">STAGE 01</span>
+                <div class="step-title">Performance Launch</div>
+                <p class="step-desc">
+                    Supervisory org review initiation, evaluation task reassignments, preliminary tier-load preparation, and validation for 10,000+ records.
+                </p>
+            </div>
+
+            <div class="flow-step">
+                <span class="step-num">STAGE 02</span>
+                <div class="step-title">Comp Configuration</div>
+                <p class="step-desc">
+                    Configuring eligibility rules, bonus matrices, and Compensation Grade Profiles (CGP) aligned with Rewards COE requirements in Sandbox & Production.
+                </p>
+            </div>
+
+            <div class="flow-step">
+                <span class="step-num">STAGE 03</span>
+                <div class="step-title">Joint UAT & Refreshes</div>
+                <p class="step-desc">
+                    Reconciling tier data flow into compensation grids, testing field editability, merit/bonus calculations, and managing manual range-warning refreshes.
+                </p>
+            </div>
+
+            <div class="flow-step">
+                <span class="step-num">STAGE 04</span>
+                <div class="step-title">Live Corrections & Closures</div>
+                <p class="step-desc">
+                    Actioning 200+ live corrections (salary, bonus, CGP, promotion rescinds), managing liaison inbox task clearances, and statement visibility rules.
+                </p>
+            </div>
+
+            <div class="flow-step">
+                <span class="step-num">STAGE 05</span>
+                <div class="step-title">APB & Post-Cycle Audits</div>
+                <p class="step-desc">
+                    Administering Annual Performance Bonus tickets, Rescind Business Process EIBs, and compliance audits for terminations, retirements, and sanctions.
+                </p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════ EXPERIENCE ═══════════════ -->
+<!-- ── Professional Experience ── -->
 <section class="section" id="experience">
     <div class="section-container">
-        <div class="section-header reveal">
-            <div class="section-label">Career Trajectory</div>
+        <div class="section-header">
+            <div class="section-label">Career Journey</div>
             <h2 class="section-title">Professional Experience</h2>
+            <p class="section-desc">
+                Track record of delivering high-stakes HRIS, compensation, and payroll operations across global enterprises.
+            </p>
         </div>
-        <div class="timeline">
+
+        <div class="experience-list">
             <!-- PwC -->
-            <div class="timeline-item" data-animate>
-                <div class="timeline-dot"></div>
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-company">PwC (PricewaterhouseCoopers)</div>
-                        <div class="timeline-role">Workday Compensation Associate</div>
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-title-group">
+                        <div class="company-avatar">
+                            <i class="fas fa-building-columns"></i>
+                        </div>
+                        <div>
+                            <div class="company-name">PwC (PricewaterhouseCoopers)</div>
+                            <div class="role-title">Workday Compensation Associate</div>
+                        </div>
                     </div>
-                    <div class="timeline-date">Jan 2025 — Present</div>
+                    <div class="experience-dates">Jan 2025 — Present · Bangalore, India</div>
                 </div>
-                <p class="timeline-desc">
-                    Drive Workday HCM compensation and performance operations for PwC's global enterprise (300,000+ employees), 
-                    delivering annual event cycles, BAU configuration, compliance auditing, and Alteryx-driven workflow automations across lines of service.
+                <p class="experience-overview">
+                    Drive Workday HCM compensation and performance operations for PwC's global firm (300,000+ employees), delivering annual event cycles, 
+                    BAU configuration, compliance auditing, and Alteryx-driven workflow automations across multiple lines of service.
                 </p>
 
-                <!-- Project 1: YE Lifecycle -->
-                <div class="project-block">
-                    <div class="project-title" onclick="toggleProject(this)">
-                        <div class="project-title-content">
-                            <i class="fas fa-layer-group"></i> End-to-End Year-End Lifecycle (Performance → Compensation → Closures → APB)
-                        </div>
-                        <span class="arrow">▾</span>
+                <div class="project-subgroup">
+                    <div class="subgroup-title">
+                        <i class="fas fa-calendar-check"></i> End-to-End Year-End Lifecycle (Performance → Compensation → Closures → APB)
                     </div>
-                    <ul class="project-bullets expanded">
-                        <li>Managed end-to-end performance event launch and readiness—including supervisory organization review initiation, evaluation task reassignments, preliminary tier-load preparation, and post-load validation for 10,000+ records.</li>
-                        <li>Configured and peer-reviewed Workday Advanced Compensation eligibility rules, bonus matrices, and Compensation Grade Profiles (CGP) aligned with global Rewards COE requirements across Sandbox and Production tenants.</li>
+                    <ul class="bullet-list">
+                        <li>Executed full-lifecycle performance event operations—from review initiation and supervisory organization launches through evaluation task reassignments, preliminary tier-load preparation, and post-load validation for 10,000+ employee records.</li>
+                        <li>Configured and peer-reviewed Workday Advanced Compensation eligibility rules, bonus matrices, and Compensation Grade Profiles (CGP) in alignment with global Rewards COE requirements across Sandbox and Production tenants.</li>
                         <li>Reconciled performance-tier data flow into compensation event grids during joint Compensation–Performance UAT; executed comprehensive test scripts covering grid configuration, field editability, merit/bonus calculations, and range-warning refreshes.</li>
                         <li>Governed live-cycle event operations and closures—processing 200+ approved corrections (base salary, bonus amounts, CGP alignments, and US promotion rescinds) and verifying post-closure liaison inbox task clearances and statement visibility.</li>
                         <li>Administered post-closure Annual Performance Bonus (APB) processing and ServiceNow correction tickets within SLA—executing transaction rescinds via Rescind Business Process EIBs and flagging adjustments for terminations, retirements, and sanctions.</li>
                     </ul>
                 </div>
 
-                <!-- Project 2: Mid-Year & BAU -->
-                <div class="project-block">
-                    <div class="project-title" onclick="toggleProject(this)">
-                        <div class="project-title-content">
-                            <i class="fas fa-sliders"></i> Mid-Year Compensation Events & BAU Operations
-                        </div>
-                        <span class="arrow">▾</span>
+                <div class="project-subgroup">
+                    <div class="subgroup-title">
+                        <i class="fas fa-sliders"></i> Mid-Year Compensation Events & BAU Operations
                     </div>
-                    <ul class="project-bullets expanded">
-                        <li>Delivered mid-year compensation event execution; prepared and validated EIB working files, resolved reference-ID/reason-code exceptions with technical teams, and maintained IEA templates and Data Collection Tool (DCT) extracts for daily handoffs.</li>
+                    <ul class="bullet-list">
+                        <li>Delivered mid-year compensation event execution; prepared and validated EIB working files, resolved reference-ID/reason-code exceptions with technical teams, and maintained IEA templates and Data Collection Tool (DCT) extracts for daily cross-time-zone handoffs.</li>
                         <li>Owned 3 recurring monthly compliance audits (CGP & Pay Equity Date, Bonus & Merit, and Minimum Wage thresholds), automating exception reporting via Alteryx to mitigate compliance risks and eliminate recurring errors.</li>
                         <li>Resolved tier-3 ServiceNow (PeoplePath) compensation requests within SLA (retroactive salary adjustments, CGP corrections, and multi-tier approval routing), sustaining a 98%+ on-time resolution rate.</li>
                         <li>Partnered with Rewards COE to propose compensation eligibility-rule optimizations and workflow enhancements based on audit trends and operational findings.</li>
                     </ul>
                 </div>
 
-                <!-- Project 3: Alteryx Automation -->
-                <div class="project-block">
-                    <div class="project-title" onclick="toggleProject(this)">
-                        <div class="project-title-content">
-                            <i class="fas fa-bolt"></i> Process Automation & Data Reconciliation Pipelines (Alteryx)
-                        </div>
-                        <span class="arrow">▾</span>
+                <div class="project-subgroup">
+                    <div class="subgroup-title">
+                        <i class="fas fa-bolt"></i> Process Automation & Data Reconciliation Pipelines (Alteryx)
                     </div>
-                    <ul class="project-bullets expanded">
+                    <ul class="bullet-list">
                         <li>Architected 3 Alteryx automation workflows that generated master EIBs and 9 upload files for preliminary performance-tier loads, eliminating 15+ hours of manual file preparation per cycle and reducing data entry errors by 80%.</li>
                         <li>Developed an automated Alteryx reconciliation pipeline cross-validating post-load Workday reporting against source records for 10,000+ employees, preventing bulk updates from overwriting live corrections.</li>
                         <li>Built an automated Alteryx audit workflow to reconcile Annual Performance Bonus (APB) outputs—including visa suspension and sanctions cases—reducing manual audit effort by 70% and reinforcing data governance.</li>
@@ -230,100 +299,92 @@
             </div>
 
             <!-- Accenture / Kraft Heinz -->
-            <div class="timeline-item" data-animate>
-                <div class="timeline-dot"></div>
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-company">Accenture (Client: Kraft Heinz)</div>
-                        <div class="timeline-role">HR Service Delivery Associate — Payroll</div>
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-title-group">
+                        <div class="company-avatar">
+                            <i class="fas fa-money-check-dollar"></i>
+                        </div>
+                        <div>
+                            <div class="company-name">Accenture (Client: Kraft Heinz)</div>
+                            <div class="role-title">HR Service Delivery Associate — Payroll</div>
+                        </div>
                     </div>
-                    <div class="timeline-date">Oct 2023 — Dec 2024</div>
+                    <div class="experience-dates">Oct 2023 — Dec 2024 · Bangalore, India</div>
                 </div>
-                <p class="timeline-desc">
+                <p class="experience-overview">
                     Administered end-to-end payroll operations for 400+ New Zealand salaried and wage employees across weekly and monthly pay cycles using Datacom DataPay and Kronos.
                 </p>
-                <div class="project-block">
-                    <div class="project-title" onclick="toggleProject(this)">
-                        <div class="project-title-content">
-                            <i class="fas fa-file-invoice-dollar"></i> Downstream Payroll Administration & Reconciliation
-                        </div>
-                        <span class="arrow">▾</span>
-                    </div>
-                    <ul class="project-bullets collapsed">
-                        <li>Executed 3 weekly and 1 monthly pay runs with high accuracy for salaried and wage employee groups, coordinating inputs across HRBPs, Payroll Champions, and union representatives.</li>
-                        <li>Interfaced time-and-attendance records from Kronos to Datacom DataPay; performed pre- and post-payroll variance analyses, GL costing allocations, and statutory deductions (KiwiSaver, court orders, tax codes).</li>
-                        <li>Actioned end-to-end lifecycle payroll transactions including new hires, leave abatements, rate adjustments, ACC injury compensation claims, and overpayment recovery adjustments within strict TATs.</li>
-                    </ul>
-                </div>
+                <ul class="bullet-list">
+                    <li>Executed 3 weekly and 1 monthly pay runs with high accuracy for salaried and wage employee groups, coordinating inputs across HRBPs, Payroll Champions, and union representatives.</li>
+                    <li>Interfaced time-and-attendance records from Kronos to Datacom DataPay; performed pre- and post-payroll variance analyses, GL costing allocations, and statutory deductions (KiwiSaver, court orders, tax codes).</li>
+                    <li>Actioned end-to-end lifecycle payroll transactions including new hires, leave abatements, rate adjustments, ACC injury compensation claims, and overpayment recovery adjustments within strict TATs.</li>
+                </ul>
             </div>
 
             <!-- Siemens -->
-            <div class="timeline-item" data-animate>
-                <div class="timeline-dot"></div>
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-company">Siemens (STSPL)</div>
-                        <div class="timeline-role">HR Senior Process Associate — Oracle Fusion & Data Management</div>
-                    </div>
-                    <div class="timeline-date">Apr 2023 — Oct 2023</div>
-                </div>
-                <p class="timeline-desc">
-                    Managed HRIS employee data lifecycle and directory synchronization across Oracle Fusion, Siemens Corporate Directory (SCD), and internal data management tools for US and Mexico populations.
-                </p>
-                <div class="project-block">
-                    <div class="project-title" onclick="toggleProject(this)">
-                        <div class="project-title-content">
-                            <i class="fas fa-database"></i> Enterprise Data Governance & Acquisition Integration
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-title-group">
+                        <div class="company-avatar">
+                            <i class="fas fa-network-wired"></i>
                         </div>
-                        <span class="arrow">▾</span>
+                        <div>
+                            <div class="company-name">Siemens (STSPL)</div>
+                            <div class="role-title">HR Senior Process Associate — Oracle Fusion & Data Management</div>
+                        </div>
                     </div>
-                    <ul class="project-bullets collapsed">
-                        <li>Governed employee master data and organizational hierarchy maintenance in Oracle Fusion for US and Mexico populations, including 1,000+ Global ID (GID) lifecycle updates during Siemens acquisitions.</li>
-                        <li>Monitored and actioned Siemens Corporate Directory (SCD) synchronization feeds and error queues, ensuring data consistency between Oracle Fusion and internal directory systems.</li>
-                        <li>Contributed to Robotic Desktop Automation (RDA) initiatives to eliminate repetitive data transactions, conducting root-cause analyses and establishing CAPA documentation for continuous process quality.</li>
-                    </ul>
+                    <div class="experience-dates">Apr 2023 — Oct 2023 · Bangalore, India</div>
                 </div>
+                <p class="experience-overview">
+                    Managed HRIS employee data lifecycle and synchronization across Oracle Fusion, Siemens Corporate Directory (SCD), and internal data management tools for US and Mexico populations.
+                </p>
+                <ul class="bullet-list">
+                    <li>Governed employee master data and organizational hierarchy maintenance in Oracle Fusion for US and Mexico populations, including 1,000+ Global ID (GID) lifecycle updates during Siemens acquisitions.</li>
+                    <li>Monitored and actioned Siemens Corporate Directory (SCD) synchronization feeds and error queues, ensuring data consistency between Oracle Fusion and internal directory systems.</li>
+                    <li>Contributed to Robotic Desktop Automation (RDA) initiatives to eliminate repetitive data transactions, conducting root-cause analyses and establishing CAPA documentation for continuous process quality.</li>
+                </ul>
             </div>
 
             <!-- Accenture / AIG -->
-            <div class="timeline-item" data-animate>
-                <div class="timeline-dot"></div>
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-company">Accenture (Client: AIG)</div>
-                        <div class="timeline-role">HR Service Delivery Associate — Workday HCM</div>
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-title-group">
+                        <div class="company-avatar">
+                            <i class="fas fa-users-gear"></i>
+                        </div>
+                        <div>
+                            <div class="company-name">Accenture (Client: AIG)</div>
+                            <div class="role-title">HR Service Delivery Associate — Workday HCM</div>
+                        </div>
                     </div>
-                    <div class="timeline-date">May 2022 — Apr 2023</div>
+                    <div class="experience-dates">May 2022 — Apr 2023 · Bangalore, India</div>
                 </div>
-                <p class="timeline-desc">
+                <p class="experience-overview">
                     Managed Workday HCM employee lifecycle transactions and operational continuity for UK and EMEA populations, supporting pre-payroll cutoff audits and corporate entity separation.
                 </p>
-                <div class="project-block">
-                    <div class="project-title" onclick="toggleProject(this)">
-                        <div class="project-title-content">
-                            <i class="fas fa-users-gear"></i> Workday HCM Operations & Corporate Restructuring
-                        </div>
-                        <span class="arrow">▾</span>
-                    </div>
-                    <ul class="project-bullets collapsed">
-                        <li>Processed Workday HCM lifecycle transactions (compensation updates, promotions, supervisory org reorganizations, and exits) via ServiceNow within established operational SLAs.</li>
-                        <li>Prepared pre-payroll cutoff audit reports reconciling Workday data with downstream payroll partners (Alight), ensuring high data accuracy for compensation elements.</li>
-                        <li>Delivered Workday regression testing and operational support during corporate restructuring and entity separation into AIG-GI and Corebridge Financial.</li>
-                    </ul>
-                </div>
+                <ul class="bullet-list">
+                    <li>Processed Workday HCM lifecycle transactions (compensation updates, promotions, supervisory org reorganizations, and exits) via ServiceNow within established operational SLAs.</li>
+                    <li>Prepared pre-payroll cutoff audit reports reconciling Workday data with downstream payroll partners (Alight), ensuring high data accuracy for compensation elements.</li>
+                    <li>Delivered Workday regression testing and operational support during corporate restructuring and entity separation into AIG-GI and Corebridge Financial.</li>
+                </ul>
             </div>
 
             <!-- Accenture / BGV -->
-            <div class="timeline-item" data-animate>
-                <div class="timeline-dot"></div>
-                <div class="timeline-header">
-                    <div>
-                        <div class="timeline-company">Accenture</div>
-                        <div class="timeline-role">HR Associate — Background Verification</div>
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-title-group">
+                        <div class="company-avatar">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <div class="company-name">Accenture</div>
+                            <div class="role-title">HR Associate — Background Verification</div>
+                        </div>
                     </div>
-                    <div class="timeline-date">Jul 2021 — Apr 2022</div>
+                    <div class="experience-dates">Jul 2021 — Apr 2022 · Bangalore, India</div>
                 </div>
-                <p class="timeline-desc">
+                <p class="experience-overview">
                     Coordinated end-to-end candidate background verifications (Sterling, HireRight) and compliance reviews for North America recruiting operations in accordance with enterprise HR policies.
                 </p>
             </div>
@@ -331,118 +392,182 @@
     </div>
 </section>
 
-<!-- ═══════════════ SKILLS ═══════════════ -->
-<section class="section" id="skills" style="background: var(--bg-secondary);">
+<!-- ── Systems & Technical Skills Matrix ── -->
+<section class="section section-alt" id="skills">
     <div class="section-container">
-        <div class="section-header reveal">
+        <div class="section-header">
             <div class="section-label">Technical Stack</div>
-            <h2 class="section-title">Platforms & Technologies</h2>
+            <h2 class="section-title">Systems & Competency Matrix</h2>
+            <p class="section-desc">
+                Comprehensive toolset spanning HCM platforms, payroll engines, data automation, and enterprise service delivery.
+            </p>
         </div>
-        <div class="skills-categories">
-            <div class="skill-category reveal">
-                <div class="skill-category-title"><i class="fas fa-building"></i> HRIS & Compensation Platforms</div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-card-icon"><i class="fas fa-cloud"></i></div>
+                    <div class="skill-card-title">Workday Ecosystem</div>
+                </div>
                 <div class="skill-tags">
-                    <span class="skill-tag">Workday HCM</span>
-                    <span class="skill-tag">Workday Advanced Compensation</span>
-                    <span class="skill-tag">Workday Performance Management</span>
-                    <span class="skill-tag">Oracle Fusion</span>
-                    <span class="skill-tag">Oracle PeopleSoft</span>
-                    <span class="skill-tag">Kronos</span>
-                    <span class="skill-tag">Datacom DataPay</span>
+                    <span class="tag">Workday HCM</span>
+                    <span class="tag">Workday Advanced Compensation</span>
+                    <span class="tag">Workday Performance</span>
+                    <span class="tag">EIB Mass Uploads</span>
+                    <span class="tag">Business Process Framework</span>
+                    <span class="tag">Eligibility Rules</span>
+                    <span class="tag">Compensation Grade Profiles</span>
+                    <span class="tag">IEA Templates</span>
+                    <span class="tag">Calculated Fields</span>
+                    <span class="tag">Custom Reports</span>
+                    <span class="tag">Sandbox Testing</span>
                 </div>
             </div>
-            <div class="skill-category reveal">
-                <div class="skill-category-title"><i class="fas fa-cogs"></i> Workday Configuration & Tools</div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-card-icon"><i class="fas fa-server"></i></div>
+                    <div class="skill-card-title">Enterprise HRIS & Payroll</div>
+                </div>
                 <div class="skill-tags">
-                    <span class="skill-tag">Enterprise Interface Builder (EIB)</span>
-                    <span class="skill-tag">Business Process Framework</span>
-                    <span class="skill-tag">Compensation Eligibility Rules</span>
-                    <span class="skill-tag">Compensation Grade Profiles (CGP)</span>
-                    <span class="skill-tag">IEA Templates & Mapping</span>
-                    <span class="skill-tag">Workday Sandbox Validation</span>
-                    <span class="skill-tag">Calculated Fields</span>
-                    <span class="skill-tag">Custom Reporting</span>
+                    <span class="tag">Oracle Fusion</span>
+                    <span class="tag">Oracle PeopleSoft</span>
+                    <span class="tag">Datacom DataPay</span>
+                    <span class="tag">Kronos Time & Attendance</span>
+                    <span class="tag">Siemens Corporate Directory (SCD)</span>
+                    <span class="tag">General Ledger (GL) Costing</span>
+                    <span class="tag">Variance Reconciliation</span>
                 </div>
             </div>
-            <div class="skill-category reveal">
-                <div class="skill-category-title"><i class="fas fa-chart-line"></i> Automation & Analytics</div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-card-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="skill-card-title">Automation & Analytics</div>
+                </div>
                 <div class="skill-tags">
-                    <span class="skill-tag">Alteryx (Workflow Design & ETL)</span>
-                    <span class="skill-tag">Advanced Microsoft Excel</span>
-                    <span class="skill-tag">XLOOKUP / VLOOKUP</span>
-                    <span class="skill-tag">PivotTables & Modeling</span>
-                    <span class="skill-tag">Conditional Formatting</span>
-                    <span class="skill-tag">Tableau Public</span>
+                    <span class="tag">Alteryx Workflow Design</span>
+                    <span class="tag">ETL Data Pipelines</span>
+                    <span class="tag">Advanced Excel (XLOOKUP)</span>
+                    <span class="tag">Pivot Tables & Data Modeling</span>
+                    <span class="tag">Conditional Formatting</span>
+                    <span class="tag">Tableau Public</span>
+                    <span class="tag">Audit Reconciliations</span>
                 </div>
             </div>
-            <div class="skill-category reveal">
-                <div class="skill-category-title"><i class="fas fa-shield-halved"></i> Enterprise Tools & Governance</div>
+
+            <div class="skill-card">
+                <div class="skill-card-header">
+                    <div class="skill-card-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <div class="skill-card-title">Service & Governance</div>
+                </div>
                 <div class="skill-tags">
-                    <span class="skill-tag">ServiceNow (PeoplePath)</span>
-                    <span class="skill-tag">Siemens Corporate Directory (SCD)</span>
-                    <span class="skill-tag">Data Collection Tool (DCT)</span>
-                    <span class="skill-tag">Audit Exception Reconciliation</span>
-                    <span class="skill-tag">SOP Documentation</span>
-                    <span class="skill-tag">CAPA Root-Cause Analysis</span>
+                    <span class="tag">ServiceNow (PeoplePath)</span>
+                    <span class="tag">Data Collection Tool (DCT)</span>
+                    <span class="tag">UAT Scenario Testing</span>
+                    <span class="tag">RAID Log Management</span>
+                    <span class="tag">SOP Development</span>
+                    <span class="tag">CAPA Root-Cause Analysis</span>
+                    <span class="tag">Lean Six Sigma Methodology</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ═══════════════ CONTACT ═══════════════ -->
-<section class="section" id="contact">
+<!-- ── Education & Certifications ── -->
+<section class="section" id="education">
     <div class="section-container">
-        <div class="section-header reveal">
-            <div class="section-label">Get in Touch</div>
-            <h2 class="section-title">Contact & Connect</h2>
+        <div class="section-header">
+            <div class="section-label">Academic & Professional Credentials</div>
+            <h2 class="section-title">Education & Certifications</h2>
         </div>
-        <div class="contact-grid reveal">
-            <div class="contact-info">
-                <h3>Open for Opportunities</h3>
+
+        <div class="credentials-grid">
+            <div class="credential-card">
+                <div class="credential-header">
+                    <i class="fas fa-graduation-cap"></i> Education
+                </div>
+                <div style="padding: 6px 0;">
+                    <div style="font-weight: 700; color: var(--text-heading); font-size: 1rem;">Bachelor of Technology (B.Tech)</div>
+                    <div style="color: var(--primary); font-weight: 600; font-size: 0.9rem; margin: 2px 0 6px;">Electrical & Electronics Engineering</div>
+                    <div style="color: var(--text-muted); font-size: 0.85rem;">Kalinga Institute of Industrial Technology (KIIT), Bhubaneswar, India · 2017 — 2021</div>
+                </div>
+            </div>
+
+            <div class="credential-card">
+                <div class="credential-header">
+                    <i class="fas fa-certificate"></i> Certifications & Training
+                </div>
+                <div class="cert-item">
+                    <div>
+                        <div class="cert-title">Lean Six Sigma Green Belt</div>
+                        <div class="cert-issuer">KPMG</div>
+                    </div>
+                    <span class="tag" style="background: var(--primary-subtle); color: var(--primary); border-color: var(--primary-border);">Certified</span>
+                </div>
+                <div class="cert-item">
+                    <div>
+                        <div class="cert-title">Tableau Essential Training</div>
+                        <div class="cert-issuer">LinkedIn Learning</div>
+                    </div>
+                    <span class="tag">Completed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Contact Section ── -->
+<section class="section section-alt" id="contact">
+    <div class="section-container">
+        <div class="contact-card-main">
+            <div class="contact-info-block">
+                <div class="section-label">Let's Connect</div>
+                <h3>Get In Touch</h3>
                 <p>
-                    Interested in connecting regarding Workday Compensation, Total Rewards operations, or HRIS automation roles. 
-                    Feel free to reach out directly via email or LinkedIn.
+                    I welcome discussions regarding Workday Advanced Compensation configuration, Total Rewards operations, 
+                    and HRIS data automation. Feel free to connect via LinkedIn or send an email.
                 </p>
-                <div class="contact-links">
-                    <a href="mailto:suranjanaseth@gmail.com" class="contact-link" id="contact-email">
-                        <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-actions">
+                    <a href="mailto:suranjanaseth@gmail.com" class="contact-button">
+                        <i class="fas fa-envelope"></i>
                         <span>suranjanaseth@gmail.com</span>
                     </a>
-                    <a href="https://linkedin.com/in/suranjana-seth-7a2a741" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-linkedin">
-                        <div class="contact-link-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <a href="https://linkedin.com/in/suranjana-seth-7a2a741" target="_blank" rel="noopener noreferrer" class="contact-button" id="contact-linkedin-link">
+                        <i class="fab fa-linkedin-in"></i>
                         <span>linkedin.com/in/suranjana-seth-7a2a741</span>
                     </a>
-                    <a href="https://suranjanaseth.github.io" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-github">
-                        <div class="contact-link-icon"><i class="fas fa-globe"></i></div>
-                        <span>suranjanaseth.github.io</span>
+                    <a href="tel:+918917246233" class="contact-button">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+91-8917246233</span>
                     </a>
                 </div>
             </div>
-            <div class="contact-visual">
-                <div class="contact-card">
-                    <div class="contact-card-name">Suranjana Seth</div>
-                    <div class="contact-card-title">Workday Compensation Associate</div>
-                    <div class="contact-card-divider"></div>
-                    <div class="contact-card-detail">PwC (PricewaterhouseCoopers)</div>
-                    <div class="contact-card-detail">Bangalore, India</div>
-                    <div class="contact-card-detail">Compensation • Performance • Automation</div>
+
+            <div class="contact-vcard">
+                <div class="vcard-name">Suranjana Seth</div>
+                <div class="vcard-role">Workday Compensation Associate</div>
+                <div class="vcard-details">
+                    <div><strong>Organization:</strong> PwC (PricewaterhouseCoopers)</div>
+                    <div><strong>Domain:</strong> Total Rewards Operations</div>
+                    <div><strong>Location:</strong> Bangalore, India</div>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="mailto:suranjanaseth@gmail.com" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                        <i class="fas fa-paper-plane"></i> Send Direct Message
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Footer -->
+<!-- ── Footer ── -->
 <footer class="footer">
-    <p>&copy; 2026 Suranjana Seth · Workday Compensation & Total Rewards Operations</p>
+    <p>&copy; 2026 Suranjana Seth · Workday Compensation & Total Rewards Operations · Bangalore, India</p>
 </footer>
 
-<!-- Back to Top -->
-<button class="back-to-top" id="backToTop" aria-label="Back to top">
-    <i class="fas fa-arrow-up"></i>
-</button>
-
-<script src="script.js?v=2.1"></script>
+<script src="script.js?v=3.0"></script>
 </body>
 </html>

@@ -1,254 +1,79 @@
-// ═══════════════════════════════════════════════════
-//  Suranjana Seth — Portfolio Interactive Script
-// ═══════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════════════════════════════
+//  Suranjana Seth — Executive Portfolio Script (Clean & Minimalist)
+// ══════════════════════════════════════════════════════════════════════════════
 
 document.addEventListener('DOMContentLoaded', () => {
-  initParticles();
   initNavbar();
-  initScrollReveal();
-  initTimelineAnimation();
-  initCountUp();
-  initBackToTop();
+  initSmoothScroll();
 });
 
-// ── Particle Background ──
-function initParticles() {
-  const canvas = document.getElementById('particle-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  let animationId;
-  let mouseX = -1000;
-  let mouseY = -1000;
-
-  function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-
-  window.addEventListener('resize', resize);
-  resize();
-
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  class Particle {
-    constructor() {
-      this.reset();
-    }
-
-    reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 1.5 + 0.4;
-      this.speedX = (Math.random() - 0.5) * 0.2;
-      this.speedY = (Math.random() - 0.5) * 0.2;
-      this.opacity = Math.random() * 0.3 + 0.1;
-      this.color = Math.random() > 0.85
-        ? `rgba(96, 165, 250, ${this.opacity * 0.5})`
-        : `rgba(148, 163, 184, ${this.opacity * 0.3})`;
-    }
-
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
-
-      // Mouse interaction
-      const dx = this.x - mouseX;
-      const dy = this.y - mouseY;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 100) {
-        const force = (100 - dist) / 100;
-        this.x += dx * force * 0.015;
-        this.y += dy * force * 0.015;
-      }
-
-      if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-      if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-    }
-
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fillStyle = this.color;
-      ctx.fill();
-    }
-  }
-
-  const particleCount = Math.min(Math.floor((canvas.width * canvas.height) / 18000), 70);
-  for (let i = 0; i < particleCount; i++) {
-    particles.push(new Particle());
-  }
-
-  function connectParticles() {
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < 130) {
-          const opacity = (1 - dist / 130) * 0.04;
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(148, 163, 184, ${opacity})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
-        }
-      }
-    }
-  }
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-      p.update();
-      p.draw();
-    });
-    connectParticles();
-    animationId = requestAnimationFrame(animate);
-  }
-
-  animate();
-}
-
-// ── Navbar Scroll ──
+// ── Navbar Scroll & Mobile Menu ──
 function initNavbar() {
   const navbar = document.getElementById('navbar');
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
 
+  // Subtle shadow on scroll
   window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-  });
-
-  navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    const spans = navToggle.querySelectorAll('span');
-    if (navLinks.classList.contains('active')) {
-      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-      spans[1].style.opacity = '0';
-      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    if (window.scrollY > 20) {
+      navbar.style.boxShadow = '0 4px 12px rgba(15, 23, 42, 0.06)';
+      navbar.style.padding = '0.75rem 0';
     } else {
-      spans[0].style.transform = '';
-      spans[1].style.opacity = '';
-      spans[2].style.transform = '';
+      navbar.style.boxShadow = 'none';
+      navbar.style.padding = '1rem 0';
     }
   });
 
-  // Close mobile nav on link click
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
+  // Mobile navigation toggle
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
       const spans = navToggle.querySelectorAll('span');
-      spans[0].style.transform = '';
-      spans[1].style.opacity = '';
-      spans[2].style.transform = '';
-    });
-  });
-}
-
-// ── Scroll Reveal ──
-function initScrollReveal() {
-  const reveals = document.querySelectorAll('.reveal');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
+      if (navLinks.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+      } else {
+        spans[0].style.transform = '';
+        spans[1].style.opacity = '';
+        spans[2].style.transform = '';
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-  reveals.forEach(el => observer.observe(el));
-}
-
-// ── Timeline Animation ──
-function initTimelineAnimation() {
-  const items = document.querySelectorAll('.timeline-item');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        const spans = navToggle.querySelectorAll('span');
+        if (spans.length >= 3) {
+          spans[0].style.transform = '';
+          spans[1].style.opacity = '';
+          spans[2].style.transform = '';
+        }
+      });
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-
-  items.forEach(item => observer.observe(item));
+  }
 }
 
-// ── Count Up Animation ──
-function initCountUp() {
-  const stats = document.querySelectorAll('.stat-number');
-  let counted = false;
+// ── Smooth Scroll Offset Handling ──
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        const headerOffset = 70;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !counted) {
-        counted = true;
-        stats.forEach(stat => {
-          const target = parseInt(stat.getAttribute('data-count'));
-          const duration = 2000;
-          const start = performance.now();
-
-          function update(now) {
-            const elapsed = now - start;
-            const progress = Math.min(elapsed / duration, 1);
-            // Ease out cubic
-            const eased = 1 - Math.pow(1 - progress, 3);
-            const current = Math.floor(target * eased);
-
-            if (target >= 100) {
-              stat.textContent = current + 'K+';
-            } else {
-              stat.textContent = current + '+';
-            }
-
-            if (progress < 1) {
-              requestAnimationFrame(update);
-            }
-          }
-
-          requestAnimationFrame(update);
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
         });
       }
     });
-  }, { threshold: 0.5 });
-
-  if (stats.length > 0) {
-    observer.observe(stats[0].closest('.hero-stats'));
-  }
-}
-
-// ── Project Toggle ──
-function toggleProject(titleEl) {
-  const bullets = titleEl.nextElementSibling;
-  const arrow = titleEl.querySelector('.arrow');
-
-  if (bullets.classList.contains('expanded')) {
-    bullets.classList.remove('expanded');
-    bullets.classList.add('collapsed');
-    arrow.classList.add('rotated');
-  } else {
-    bullets.classList.remove('collapsed');
-    bullets.classList.add('expanded');
-    arrow.classList.remove('rotated');
-  }
-}
-
-// ── Back to Top ──
-function initBackToTop() {
-  const btn = document.getElementById('backToTop');
-
-  window.addEventListener('scroll', () => {
-    btn.classList.toggle('visible', window.scrollY > 500);
-  });
-
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
